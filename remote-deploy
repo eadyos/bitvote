@@ -1,0 +1,13 @@
+#!/bin/bash
+
+cp /etc/nginx/sites-available/default.install /etc/nginx/sites-available/default
+nginx -s reload
+service tomcat7 stop
+rm -rf /var/lib/tomcat7/webapps/ROOT
+cp /tmp/ROOT.war /var/lib/tomcat7/webapps/ROOT.war
+service tomcat7 start
+cp /etc/nginx/sites-available/default.live /etc/nginx/sites-available/default
+nginx -s reload
+
+
+

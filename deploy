@@ -1,0 +1,7 @@
+#!/bin/bash
+
+grails clean
+grails war
+scp -P 4422 target/ROOT.war robsrules.com:/tmp
+ssh -p 4422 root@robsrules.com 'bash -s' < remote-deploy
+

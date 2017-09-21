@@ -1,0 +1,2 @@
+email links that say 'see the issue here' needs to direct to the specific issue
+Send links for password resets, etc, that are specific for a user so field information doesn't need re-entering.
